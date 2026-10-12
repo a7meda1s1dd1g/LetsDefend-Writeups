@@ -1,68 +1,62 @@
-# LetsDefend Write-ups
+# LetsDefend SOC Analyst Writeups
 
-Incident reports for SOC alerts I investigated on [LetsDefend](https://letsdefend.io). Each report follows a consistent structure: investigation steps, root cause analysis, risk assessment, MITRE ATT&CK mapping, links to compliance controls, and recommendations for prevention and detection.
+A collection of security alert investigations completed in the LetsDefend SOC Analyst training environment. This repository documents my hands-on practice in alert triage, log analysis, threat identification, incident response, and investigation reporting.
 
-The goal is to practice the full incident response workflow, not only reach a verdict, and to connect each alert to the security controls that would prevent or detect it.
+## Objectives
 
-## About me
+- Practice investigating security alerts in a SOC environment.
+- Analyze suspicious activity and identify potential threats.
+- Document investigation findings and supporting evidence.
+- Apply incident response procedures and determine alert verdicts.
+- Build practical skills for a Security Operations Center (SOC) Analyst role.
 
-["Communication System Engineering student in University of Science and Technology, building hands-on experience in security monitoring, incident response, and compliance (PCI DSS, ISO 27001, SWIFT CSP). Looking for a junior cybersecurity engineer or analyst role."]
+## Investigation Workflow
 
-- LinkedIn: [FILL IN]
-- Email: [ahmedalsiddig2003@gmail.com]
+Each writeup follows a consistent investigation process:
 
-## Alert index
+1. **Alert Triage** — Review the alert details, severity, and relevant events.
+2. **Investigation** — Examine available logs, indicators, and supporting evidence.
+3. **Threat Assessment** — Determine whether the activity is malicious or benign.
+4. **Response** — Document containment, blocking, or escalation actions when applicable.
+5. **Conclusion** — Record the final verdict and summarize the findings.
 
-| Alert | Type | Severity | Verdict | MITRE ATT&CK | Report |
-|-------|------|----------|---------|--------------|--------|
-| SOC114 | Phishing (malicious link/attachment) | High | True Positive | T1566.002, T1204.002 | [Read](alerts/SOC114-Malicious-Attachment-Phishing.md) |
+## Repository Structure
 
-*More reports are added as I complete them.*
-
-## How each report is structured
-
-1. **Executive summary** - a non-technical overview a manager can read in 30 seconds
-2. **Alert details** - what triggered, source, destination, raw data
-3. **Investigation** - each step with what I checked, why, and what I found
-4. **Timeline** - sequence of events
-5. **Root cause analysis** - how it happened and why existing controls missed it
-6. **Impact and risk assessment** - likelihood x impact, residual risk
-7. **Containment, eradication, recovery** - actions taken
-8. **Indicators of compromise** - IPs, URLs, hashes, senders
-9. **Recommendations** - prevention, detection (SIEM rule ideas), process, and change requests
-10. **Lessons learned**
-
-## Frameworks referenced
-
-- **MITRE ATT&CK** - technique mapping for each alert
-- **PCI DSS v4.0** - relevant requirements (e.g. 5.4.1 anti-phishing, 10 logging and monitoring, 12.10 incident response)
-- **ISO/IEC 27001:2022** - relevant Annex A controls
-- **SWIFT CSP / CSCF** - relevant controls for financial messaging environments
-
-Control references are my own mapping for learning purposes and are checked against the published framework documents. They are not audit advice.
-
-## Skills practiced
-
-- Email and phishing analysis (headers, URLs, attachments, sender reputation)
-- Threat intelligence lookups and IOC extraction
-- Incident response: containment, eradication, recovery
-- Root cause analysis and risk assessment
-- Mapping incidents to MITRE ATT&CK and compliance controls
-- Writing clear technical and executive-level reports
-- Proposing detection logic and change requests
-
-## Repository layout
-
-```
-.
-├── README.md
-├── alerts/      # one report per alert
-└── images/      # sanitized screenshots used in reports
+```text
+letsdefend-writeups/
+└── alerts/
+    └── SOC141/
+        ├── Phishing-URL-Detected.md
+        └── screenshots/
+            ├── 01-alert-details.png
+            ├── 02-url-analysis.png
+            └── 03-incident-response.png
 ```
 
-## Notes
+Each alert has its own directory containing the investigation report and relevant screenshots.
 
-- Reports describe my **methodology and reasoning**, not answer keys for the platform's challenges.
-- Screenshots are cropped to remove personal information.
-- I used AI tools to help with structure and formatting. The investigations and analysis are my own, and I verify the technical references.
-- The IOCs listed come from a training platform and are not live threats.
+## Skills Practiced
+
+- Security alert triage and investigation
+- Phishing URL analysis
+- Log analysis and event correlation
+- Indicator of Compromise (IOC) assessment
+- Endpoint containment and incident response
+- Security incident documentation
+- True Positive and False Positive classification
+
+## Tools and Platforms
+
+- **LetsDefend** — SOC alert investigation and incident response practice
+- **VirusTotal** — URL and threat reputation analysis
+- **GitHub** — Investigation documentation and portfolio management
+
+## Disclaimer
+
+All investigations documented in this repository are based on training exercises completed in LetsDefend. The findings and screenshots are shared for educational and portfolio purposes.
+
+This repository is intended to demonstrate my learning progress and practical investigation methodology. It does not contain confidential organizational data or claim professional incident response experience.
+
+## About
+
+I am developing my practical cybersecurity skills through hands-on SOC investigations and security analysis exercises. This repository serves as a record of my progress toward a career as a SOC Analyst.

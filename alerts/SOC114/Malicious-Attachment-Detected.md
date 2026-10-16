@@ -50,7 +50,7 @@ The suspicious attachment or URL was analyzed using VirusTotal as part of the in
 
 The suspicious file was analyzed in ANY.RUN to examine its behavior in a sandbox environment and identify potential malicious activity.
 
-![ANY.RUN Analysis](screenshots/04-any-run.png)
+![ANY.RUN Analysis](screenshots/04-Any-run.png)
 
 ## 5. Hybrid Analysis
 
